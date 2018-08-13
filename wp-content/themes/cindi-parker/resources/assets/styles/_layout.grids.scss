@@ -1,0 +1,71 @@
+/* ------------------------------------ *\
+    $GRIDS
+\* ------------------------------------ */
+
+.l-grid {
+  display: grid;
+  grid-template-rows: auto;
+  grid-column-gap: $space;
+  grid-row-gap: $space*4;
+
+  @include media('>large') {
+    grid-column-gap: $space*2;
+  }
+
+  &-item {
+    position: relative;
+  }
+
+  &--2up {
+    align-items: center;
+
+    @include media('>medium') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--flex {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 calc($space * -1);
+
+      @include media('>xxlarge') {
+        margin: 0 calc($space*1.5 * -1);
+      }
+
+      > * {
+        width: 100%;
+        padding-left: $space;
+        padding-right: $space;
+        margin-top: $space*2;
+
+        @include media('>small') {
+          width: 50%;
+        }
+
+        @include media('>xxlarge') {
+          padding-left: $space*1.5;
+          padding-right: $space*1.5;
+          margin-top: $space*3;
+        }
+      }
+    }
+  }
+
+  &--3up {
+    @include media('>medium') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &--4up {
+    grid-template-columns: repeat(minmax(200px, 1fr));
+
+    @include media('>small') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('>large') {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

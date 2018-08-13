@@ -1,0 +1,279 @@
+/* ------------------------------------ *\
+    $MAIN CONTENT AREA
+\* ------------------------------------ */
+
+.l-wrap {
+  padding: 0;
+  margin: 0;
+}
+
+.l-main {
+  position: relative;
+  z-index: 1;
+}
+
+// Header
+.c-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+
+  @include media('>large') {
+    flex-direction: row;
+  }
+}
+
+// Navigation
+.c-primary-nav {
+  &__toggle {
+    z-index: 2;
+
+    &.this-is-active {
+      display: flex;
+    }
+
+    @include media('>xlarge') {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: none;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    @include media('>xlarge') {
+      flex-direction: row;
+      display: flex;
+      margin: $space/2 $space;
+    }
+
+    .c-primary-nav__link {
+      padding: $space/2;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: bold;
+      font-size: rem(12);
+
+      &:hover {
+        color: $c-secondary;
+      }
+    }
+
+    &.this-is-active {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      background-color: $c-secondary;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: $space;
+      margin: 0;
+
+      & > * + * {
+        margin-top: $space;
+      }
+
+      .c-primary-nav__link {
+        font-size: rem(30);
+      }
+    }
+
+    .o-button {
+      position: relative;
+      top: 0;
+      right: 0;
+      left: auto;
+      bottom: auto;
+      transform: none;
+      margin-bottom: $space;
+
+      @include media('>xlarge') {
+        outline: none;
+        padding: $space $space;
+        font-size: rem(12);
+        letter-spacing: 0.15em;
+        font-weight: bold;
+        margin: 0 $space 0 $space/2;
+      }
+    }
+
+    .u-icon {
+      svg path {
+        transition: all 0.2s ease;
+      }
+
+      &:hover {
+        svg path {
+          fill: $c-secondary;
+        }
+      }
+    }
+  }
+}
+
+// Grid
+.l-grid {
+  flex-direction: column;
+
+  @include media('>large') {
+    flex-direction: row;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &-item {
+    width: 100%;
+    min-height: 50vh;
+    margin: 0;
+
+    @include media('>large') {
+      width: 50%;
+    }
+  }
+
+  &-item:first-child {
+    background-color: $c-tertiary;
+    z-index: 1;
+    padding: 0;
+  }
+
+  &-item:last-child {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: $space*2;
+  }
+}
+
+// Article
+.c-article {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  @include media('>large') {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+
+  h1 {
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    z-index: -1;
+    transform: rotate(-15deg);
+
+    @include media('>large') {
+      top: 100px;
+      left: -150px;
+    }
+  }
+
+  .c-logo {
+    max-width: 200px;
+    display: block;
+  }
+}
+
+// Gallery
+.c-gallery {
+  display: flex;
+  height: 70vh;
+
+  @include media('>large') {
+    height: 100%;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+// Button
+.o-button--fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  margin: 0 auto;
+  width: 100%;
+  display: table;
+  height: rem(80);
+
+  @include media('>large') {
+    position: absolute;
+    bottom: $space*2;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// Modal
+.c-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba($c-black, 0.8);
+
+  &.this-is-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  &__content {
+    padding: $space;
+    padding-bottom: $space*2;
+    background-color: $c-off-white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    max-width: rem(500);
+    position: relative;
+    margin: $space;
+
+    .u-icon__close {
+      position: absolute;
+      top: $space/2;
+      right: $space/2;
+    }
+
+    @include media('<=small') {
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+    }
+  }
+}
+
+body:not(.home) {
+  .l-wrap {
+    padding: $space*4 $space $space $space;
+  }
+
+  .c-article {
+    padding-top: $space*2;
+  }
+}

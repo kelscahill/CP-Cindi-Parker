@@ -1,0 +1,61 @@
+/* ------------------------------------ *\
+    $SPECIFIC FORMS
+\* ------------------------------------ */
+
+input[type=radio],
+input[type=checkbox] {
+  outline: none;
+  margin: 0;
+  margin-right: rem(8);
+  height: rem(15);
+  width: rem(15);
+  line-height: rem(15);
+  background-size: rem(15);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  display: block;
+  float: left;
+  user-select: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid $c-border-color;
+  padding: 0;
+}
+
+input[type=radio] + label,
+input[type=checkbox] + label {
+  display: inline-block;
+  top: rem(-2);
+  cursor: pointer;
+  position: relative;
+}
+
+input[type=radio] {
+  border-radius: rem(50);
+}
+
+input[type=radio]:checked,
+input[type=checkbox]:checked {
+  border-color: $c-primary;
+  //background: $c-primary url('../images/icons/icon-check.svg') center center no-repeat;
+  background-size: rem(10);
+}
+
+button[type=submit] {
+  margin-top: $space;
+}
+
+select {
+  appearance: none;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: "";
+  //background: url('../images/icons/icon-arrow-down.svg') center left $space/2 no-repeat;
+  background-size: calc($space - 5px);
+  padding-left: calc($space*2 - 5px);
+
+  &::-ms-expand {
+    display: none;
+  }
+}

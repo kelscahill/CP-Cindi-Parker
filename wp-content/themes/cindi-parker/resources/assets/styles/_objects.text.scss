@@ -1,0 +1,98 @@
+/* ------------------------------------ *\
+    $TEXT TYPES
+\* ------------------------------------ */
+
+.o-heading {
+  position: relative;
+
+  h1 {
+    position: relative;
+    top: rem(30);
+    z-index: 1;
+    display: block;
+
+    @include media('>medium') {
+      top: rem(40);
+    }
+
+    @include media('>xlarge') {
+      top: rem(50);
+    }
+  }
+
+  h2 {
+    z-index: 2;
+    position: relative;
+  }
+}
+
+/**
+ * Font Families
+ */
+.u-font {
+  font-family: $ff-font;
+}
+
+.u-font--primary {
+  font-family: $ff-font--primary;
+}
+
+/**
+ * Text Sizes
+ */
+.u-font--xs {
+  font-size: var(--font-size-xs);
+}
+
+.u-font--s {
+  font-size: var(--font-size-s);
+}
+
+.u-font--m {
+  font-size: var(--font-size-m);
+}
+
+.u-font--l {
+  font-size: var(--font-size-l);
+}
+
+.u-font--xl {
+  font-size: var(--font-size-xl);
+}
+
+.u-font--xxl {
+  font-size: var(--font-size-xxl);
+}
+
+/**
+ * Primary type styles
+ */
+
+/**
+ * Text Transforms
+ */
+.u-text-transform--upper {
+  text-transform: uppercase;
+}
+
+.u-text-transform--lower {
+  text-transform: lowercase;
+}
+
+/**
+ * Text Styles
+ */
+.u-text-style--italic {
+  font-style: italic;
+}
+
+.u-font-weight--normal {
+  font-weight: normal;
+}
+
+/**
+ * Text Decorations
+ */
+.u-text-decoration--underline {
+  text-decoration: underline;
+}

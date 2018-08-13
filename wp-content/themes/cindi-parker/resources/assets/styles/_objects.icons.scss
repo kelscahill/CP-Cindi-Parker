@@ -1,0 +1,133 @@
+/* ------------------------------------ *\
+    $ICONS
+\* ------------------------------------ */
+
+/**
+ * Icon Sizing
+ */
+.u-icon {
+  display: inline-block;
+}
+
+.u-icon--xs {
+  width: $icon-xsmall;
+  height: $icon-xsmall;
+}
+
+.u-icon--s {
+  width: $icon-small;
+  height: $icon-small;
+}
+
+.u-icon--m {
+  width: $icon-medium;
+  height: $icon-medium;
+}
+
+.u-icon--l {
+  width: $icon-large;
+  height: $icon-large;
+}
+
+.u-icon--xl {
+  width: $icon-xlarge;
+  height: $icon-xlarge;
+}
+
+.u-icon__menu {
+  width: rem(50);
+  height: rem(50);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: $space/2;
+  right: $space/2;
+  content: "";
+  cursor: pointer;
+
+  &--span {
+    width: rem(50);
+    height: rem(2);
+    background-color: $c-white;
+    margin-top: rem(7);
+    transition: all 0.25s ease;
+    position: relative;
+
+    @include media('>large') {
+      background-color: $c-black;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &.this-is-active {
+    justify-content: center;
+
+    .u-icon__menu--span {
+      margin: 0;
+      width: rem(50);
+      background-color: $c-black;
+    }
+
+    .u-icon__menu--span:first-child {
+      transform: rotate(45deg);
+      top: 1px;
+    }
+
+    .u-icon__menu--span:last-child {
+      transform: rotate(-45deg);
+      top: -1px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .u-icon__menu--span:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+.u-icon__close {
+  width: rem(50);
+  height: rem(50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  content: "";
+  cursor: pointer;
+  z-index: 9;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+  span {
+    position: relative;
+    transition: all 0.25s ease;
+    width: rem(50);
+    height: rem(1);
+    background-color: $c-black;
+    top: 0;
+
+    &:first-child {
+      transform: rotate(45deg);
+      top: 0.5px;
+    }
+
+    &:last-child {
+      transform: rotate(-45deg);
+      top: -0.5px;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,18 @@
+/* ------------------------------------ *\
+    $LINKS
+\* ------------------------------------ */
+
+a {
+  text-decoration: none;
+  color: $c-link-color;
+  transition: all 0.25s ease-in-out;
+  display: inline-block;
+}
+
+.u-link--underline {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

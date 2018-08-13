@@ -1,0 +1,28 @@
+/* ------------------------------------ *\
+    $TABLES
+\* ------------------------------------ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid $c-border-color;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  border: 1px solid transparent;
+  padding: $space/2 0;
+  text-transform: uppercase;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+tr {
+  border: 1px solid transparent;
+}
+
+td {
+  border: 1px solid transparent;
+  padding: $space/2;
+}

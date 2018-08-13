@@ -1,0 +1,15 @@
+/* ------------------------------------ *\
+    $ARTICLE
+\* ------------------------------------ */
+
+.c-article {
+  &__body {
+    a {
+      border-bottom: 1px solid $c-tan;
+
+      &:hover {
+        border-color: $c-secondary;
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+/* ------------------------------------ *\
+    $HELPER/TRUMP CLASSES
+\* ------------------------------------ */
+
+.u-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($c-black, 0.4);
+  z-index: 0;
+  pointer-events: none;
+}
+
+// Fitvids
+
+.fluid-width-video-wrapper {
+  padding-top: 56.25% !important;
+}
+
+/**
+ * Completely remove from the flow and screen readers.
+ */
+
+.is-hidden {
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+
+.is-vishidden,
+.screen-reader-text,
+.sr-only {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/**
+ * Hide elements only present and necessary for js enabled browsers.
+ */
+
+.no-js .no-js-hide {
+  display: none;
+}
+
+/**
+ * Round Element
+ */
+
+.u-round {
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+/**
+ * Misc
+ */
+
+.u-overflow--hidden {
+  overflow: hidden;
+}
+
+.u-width--100p {
+  width: 100%;
+}
+
+/**
+ * Alignment
+ */
+
+.u-center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-text-align--right {
+  text-align: right;
+}
+
+.u-text-align--center {
+  text-align: center;
+}
+
+.u-text-align--left {
+  text-align: left;
+}
+
+.u-align--center {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.u-vertical-align--center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/**
+ * Background Covered
+ */
+
+.u-background--cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.u-background-image {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/**
+ * Border
+ */
+
+.u-border {
+  border: $border-style;
+
+  &--rounded {
+    border-radius: rem(3);
+  }
+}

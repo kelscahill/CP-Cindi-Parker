@@ -1,0 +1,32 @@
+/* ------------------------------------ *\
+    $MIXINS
+\* ------------------------------------ */
+
+/**
+ * Convert px to rem.
+ *
+ * @param int $size
+ *   Size in px unit.
+ * @return string
+ *   Returns px unit converted to rem.
+ */
+@function rem($size) {
+  $remSize: $size / $rembase;
+
+  @return #{$remSize}rem;
+}
+
+@mixin u-center-block {
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+/**
+ * Standard paragraph
+ */
+@mixin p {
+  font-family: $ff-font;
+  font-size: rem(16);
+  line-height: 1.5;
+}

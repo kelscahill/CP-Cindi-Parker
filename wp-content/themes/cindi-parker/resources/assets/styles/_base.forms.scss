@@ -1,0 +1,104 @@
+/* ------------------------------------ *\
+    $FORMS
+\* ------------------------------------ */
+form {
+  font-family: $ff-font;
+
+  @include p;
+}
+
+form ol,
+form ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+legend {
+  margin-bottom: rem(6);
+  font-weight: bold;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: $border-style;
+  padding: $space;
+  -webkit-appearance: none;
+  border-radius: rem(3);
+  outline: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.3em;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::placeholder {
+  color: $c-gray;
+}
+
+/**
+ * Validation
+ */
+.has-error {
+  border-color: $c-error !important;
+}
+
+.is-valid {
+  border-color: $c-valid !important;
+}
+
+.c-form {
+  label {
+    margin-bottom: $space/2;
+    display: block;
+  }
+
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc($space/2 * -1);
+    margin-right: calc($space/2 * -1);
+
+    &-item {
+      padding: 0 $space/2;
+      margin-bottom: $space;
+      width: 100%;
+
+      &--half {
+        width: 50%;
+      }
+
+      &--qaurter {
+        width: 25%;
+      }
+    }
+  }
+}

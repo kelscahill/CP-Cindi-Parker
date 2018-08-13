@@ -1,0 +1,14 @@
+/* ------------------------------------ *\
+    $ANIMATIONS & TRANSITIONS
+\* ------------------------------------ */
+
+/**
+ * Transitions
+ */
+.has-trans {
+  transition: all 0.4s ease-in-out;
+}
+
+.has-trans--fast {
+  transition: all 0.1s ease-in-out;
+}

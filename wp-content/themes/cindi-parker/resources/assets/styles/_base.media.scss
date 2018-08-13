@@ -1,0 +1,36 @@
+/* ------------------------------------ *\
+    $MEDIA ELEMENTS
+\* ------------------------------------ */
+
+/**
+ * Flexible Media
+ */
+iframe,
+img,
+object,
+svg,
+video {
+  max-width: 100%;
+  border: none;
+}
+
+svg {
+  max-height: 100%;
+}
+
+picture,
+picture img {
+  display: block;
+}
+
+figure {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+figcaption {
+  a {
+    display: block;
+  }
+}
