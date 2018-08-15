@@ -6,7 +6,7 @@ input[type=radio],
 input[type=checkbox] {
   outline: none;
   margin: 0;
-  margin-right: rem(8);
+  margin-right: rem(10);
   height: rem(15);
   width: rem(15);
   line-height: rem(15);
@@ -18,17 +18,20 @@ input[type=checkbox] {
   float: left;
   user-select: none;
   -webkit-appearance: none;
-  background-color: transparent;
+  background-color: $c-white;
   border: 1px solid $c-border-color;
+  border-radius: 0;
   padding: 0;
 }
 
 input[type=radio] + label,
 input[type=checkbox] + label {
   display: inline-block;
-  top: rem(-2);
+  top: rem(-4);
   cursor: pointer;
   position: relative;
+  width: calc(100% - 25px);
+  text-align: left;
 }
 
 input[type=radio] {
@@ -37,8 +40,8 @@ input[type=radio] {
 
 input[type=radio]:checked,
 input[type=checkbox]:checked {
-  border-color: $c-primary;
-  //background: $c-primary url('../images/icons/icon-check.svg') center center no-repeat;
+  border-color: $c-secondary;
+  background: $c-secondary url('../assets/images/icon-checkbox.svg') center center no-repeat;
   background-size: rem(10);
 }
 
