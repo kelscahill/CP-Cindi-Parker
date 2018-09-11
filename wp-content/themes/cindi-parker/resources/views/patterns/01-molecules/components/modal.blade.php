@@ -13,8 +13,10 @@
       <input type="text" placeholder="First Name" name="FNAME" id="FNAME" />
       <input type="email" class="required" placeholder="Email Address" name="EMAIL" id="EMAIL" required />
       <fieldset>
-        <input type="checkbox" value="I agree to the terms of services" required />
-        <label for="checkbox">I agree to the <a class="u-link--underline" target="_blank" href="http://cindiparker.com/wp-content/uploads/2018/08/CINDIPARKER_Terms-of-Service_08112018.pdf">terms and conditions</a>.</label>
+        <label class="radio" for="MERGE2-0">
+          <input type="radio" name="MERGE2" id="MERGE2-0" value="I agree to the terms and conditions. www.cindiparker.com/privacy-policy" class="av-radio">
+          <span>I agree to the <a class="u-link--underline" target="_blank" href="http://cindiparker.com/wp-content/uploads/2018/08/CINDIPARKER_Terms-of-Service_08112018.pdf">terms and conditions</a>.</span>
+        </label>
       </fieldset>
       <button>Join</button>
     </form>

@@ -7,10 +7,10 @@ input[type=checkbox] {
   outline: none;
   margin: 0;
   margin-right: rem(10);
-  height: rem(15);
-  width: rem(15);
-  line-height: rem(15);
-  background-size: rem(15);
+  height: rem(20);
+  width: rem(20);
+  line-height: rem(20);
+  background-size: rem(20);
   background-repeat: no-repeat;
   background-position: 0 0;
   cursor: pointer;
@@ -24,13 +24,13 @@ input[type=checkbox] {
   padding: 0;
 }
 
-input[type=radio] + label,
-input[type=checkbox] + label {
+input[type=radio] + span,
+input[type=checkbox] + span {
   display: inline-block;
-  top: rem(-4);
+  top: rem(-2);
   cursor: pointer;
   position: relative;
-  width: calc(100% - 25px);
+  width: calc(100% - 35px);
   text-align: left;
 }
 

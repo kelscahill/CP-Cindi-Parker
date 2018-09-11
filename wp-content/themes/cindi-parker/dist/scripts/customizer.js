@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f773b067a870829de29c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "afca6885d5fa251768ea"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -722,7 +722,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(37)(__webpack_require__.s = 37);
+/******/ 	return hotCreateRequire(38)(__webpack_require__.s = 38);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -2351,7 +2351,8 @@ module.exports = function(hash, moduleMap, options) {
 /* 34 */,
 /* 35 */,
 /* 36 */,
-/* 37 */
+/* 37 */,
+/* 38 */
 /*!***************************************************************************!*\
   !*** multi ./build/util/../helpers/hmr-client.js ./scripts/customizer.js ***!
   \***************************************************************************/
@@ -2360,11 +2361,11 @@ module.exports = function(hash, moduleMap, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/kelseycahill/Sites/Cindi Parker/wp-content/themes/cindi-parker/resources/assets/build/util/../helpers/hmr-client.js */2);
-module.exports = __webpack_require__(/*! ./scripts/customizer.js */38);
+module.exports = __webpack_require__(/*! ./scripts/customizer.js */39);
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /*!*******************************!*\
   !*** ./scripts/customizer.js ***!
   \*******************************/
